@@ -12,8 +12,9 @@ class Collar < ApplicationRecord
 
   # ////////////////////////////////////////////////////////////
   # add this when search is working ///////////////////////////
+  # //////////////////////////////////////////////////////////
   # include PgSearch::Model
-  # multisearchable against: %i[programming_language name]
+  # multisearchable against: %i[name color secondary_color size]
 
   # pg_search_scope :search_programming_language,
   #                 against: %i[programming_language],
@@ -23,13 +24,4 @@ class Collar < ApplicationRecord
   #                 using: {
   #                   tsearch: { prefix: true }
   #                 }
-end
-create_table "collars", force: :cascade do |t|
-  t.string "name"
-  t.string "color"
-  t.string "secondary_color"
-  t.string "image_url"
-  t.datetime "created_at", null: false
-  t.datetime "updated_at", null: false
-  t.string "size"
 end
