@@ -8,7 +8,7 @@ class Collar < ApplicationRecord
   # validate :end_date_after_start_date
 
   has_many :orders, dependent: :destroy
-  # belongs_to :user
+  # belongs_to :user // used with devise
 
   # ////////////////////////////////////////////////////////////
   # add this when search is working ///////////////////////////
