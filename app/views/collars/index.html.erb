@@ -1,0 +1,10 @@
+<h1>Todas coleiras</h1>
+
+<ul>
+  <% @collars.each do |collar| %>
+    <li>
+      <%= link_to collar.name, collar %>
+      <%= image_tag collar.image_url, class: "collar-image", size: "150px" %>
+    </li>
+  <% end %>
+</ul>

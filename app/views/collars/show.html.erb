@@ -1,0 +1,8 @@
+<h1> <%= @collar.name %> </h1>
+
+<p>
+  <%= @collar.color %>
+  <%= @collar.secondary_color  if @collar.secondary_color.present? %>
+</p>
+
+<%= image_tag @collar.image_url, class: "collar-image", size: "250px" %>
